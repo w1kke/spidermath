@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <title>Spider-Math — Swing &amp; Solve!</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🕷️</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Baloo+2:wght@500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div id="app">
+    <canvas id="scene" aria-label="City with three buildings. Pick the building showing the right answer."></canvas>
+
+    <header id="hud" class="hidden">
+      <button id="btn-home" class="chip-btn" aria-label="Back to menu">⌂</button>
+      <div id="hud-center">
+        <div id="question-panel">
+          <span id="q-label">Question 1 of 10</span>
+          <div id="question-text">3 + 4 = ?</div>
+        </div>
+        <div id="lives" aria-label="Lives left"></div>
+      </div>
+      <button id="btn-sound" class="chip-btn" aria-label="Toggle sound">🔊</button>
+    </header>
+
+    <div id="hint-toast" class="hidden">Tap the building with the right answer!</div>
+
+    <div id="start-screen" class="screen">
+      <div class="web-corner web-tl" aria-hidden="true"></div>
+      <div class="web-corner web-br" aria-hidden="true"></div>
+      <div class="start-inner">
+        <div class="title-burst" aria-hidden="true"></div>
+        <h1 class="game-title"><span>Spider</span><em>-</em><span class="t-red">Math!</span></h1>
+        <p class="tagline">Swing through the city by solving math!</p>
+        <div class="grade-buttons">
+          <button class="grade-btn" data-grade="1">
+            <span class="g-big">Grade 1</span>
+            <span class="g-small">+ and − up to 20</span>
+          </button>
+          <button class="grade-btn" data-grade="2">
+            <span class="g-big">Grade 2</span>
+            <span class="g-small">+ − and × up to 100</span>
+          </button>
+          <button class="grade-btn" data-grade="3">
+            <span class="g-big">Grade 3</span>
+            <span class="g-small">× ÷ and big numbers</span>
+          </button>
+        </div>
+        <p class="howto">Pick the building with the right answer — but choose wisely,<br>a wrong building <strong>collapses</strong>! You have ❤️❤️❤️</p>
+      </div>
+    </div>
+
+    <div id="end-screen" class="screen hidden">
+      <div class="end-panel">
+        <h2 id="end-title">City saved!</h2>
+        <div id="end-stars" aria-hidden="true"></div>
+        <p id="end-score">You solved 10 of 10!</p>
+        <p id="end-message">Amazing swinging, hero!</p>
+        <div class="end-buttons">
+          <button id="btn-again" class="big-btn">Play again</button>
+          <button id="btn-menu" class="big-btn alt">Change grade</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/data/grade1.js"></script>
+  <script src="js/data/grade2.js"></script>
+  <script src="js/data/grade3.js"></script>
+  <script src="js/sound.js"></script>
+  <script src="js/questions.js"></script>
+  <script src="js/render.js"></script>
+  <script src="js/game.js"></script>
+</body>
+</html>
