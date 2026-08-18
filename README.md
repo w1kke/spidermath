@@ -10,6 +10,10 @@ No build step, no dependencies — plain HTML/CSS/JS.
 
 ## Play it
 
+**Online (any phone or computer, no install):** https://w1kke.github.io/spidermath/
+
+Locally:
+
 ```bash
 python3 -m http.server 8642
 # then open http://localhost:8642
